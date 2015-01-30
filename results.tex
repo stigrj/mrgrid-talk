@@ -1,0 +1,140 @@
+\begin{frame}
+\frametitle{Grid adaptation}
+\centering
+
+\textbf{Grid adaptation $10^{-3}$ based ONLY on input density $CH_4$}
+\begin{table}
+\centering
+\begin{tabular}{r|rrr|rrrr}
+\hline
+\hline
+\multicolumn{1}{c|}{}&
+\multicolumn{3}{c|}{Numerical integral}&
+\multicolumn{4}{c}{Estimated error}\\
+    &          &        &           &       &       &       &       \\
+\multicolumn{1}{c|}{nQuad}&
+\multicolumn{1}{c}{$N$}&
+\multicolumn{1}{c}{$\Delta N$}&
+\multicolumn{1}{c|}{$E_{xc}$}&
+\multicolumn{1}{c}{$\rho$}&
+\multicolumn{1}{c}{$E_{xc}$}&
+\multicolumn{1}{c}{$\delta E_{xc}$}&
+\multicolumn{1}{c}{$\delta^2 E_{xc}$}\\
+    &          &        &           &       &       &       &       \\
+118k&10.0075057& 7.5e-03&-6.50830522&4.6e-01&8.1e-00&2.4e-03&2.4e-04\\
+247k&10.0002710& 2.7e-04&-6.46214003&9.1e-03&1.2e-01&1.2e-03&1.2e-04\\
+376k& 9.9999701&-3.0e-05&-6.46026428&4.5e-04&6.5e-03&1.2e-03&1.2e-04\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{10mm}
+
+\textbf{Grid adaptation $10^{-3}$ based on ALL output functions $CH_4$}
+\begin{table}
+\centering
+\begin{tabular}{r|rrr|rrrr}
+\hline
+\hline
+\multicolumn{1}{c|}{}&
+\multicolumn{3}{c|}{Numerical integral}&
+\multicolumn{4}{c}{Estimated error}\\
+    &          &        &           &       &       &       &       \\
+\multicolumn{1}{c|}{nQuad}&
+\multicolumn{1}{c}{$N$}&
+\multicolumn{1}{c}{$\Delta N$}&
+\multicolumn{1}{c|}{$E_{xc}$}&
+\multicolumn{1}{c}{$\rho$}&
+\multicolumn{1}{c}{$E_{xc}$}&
+\multicolumn{1}{c}{$\delta E_{xc}$}&
+\multicolumn{1}{c}{$\delta^2 E_{xc}$}\\
+    &          &        &           &       &       &       &       \\
+118k&10.0075061& 7.5e-03&-6.50830522&4.6e-01&8.1e-00&2.4e-03&2.4e-04\\
+419k&10.0002723& 2.7e-04&-6.46214030&9.1e-03&1.2e-01&6.9e-04&7.0e-05\\
+548k& 9.9999711&-2.9e-05&-6.46026456&4.5e-04&6.5e-03&6.8e-04&6.8e-05\\
+663k& 9.9999986&-1.4e-06&-6.46036718&7.4e-06&1.5e-04&6.8e-04&6.8e-05\\
+       
+\hline
+\hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}
+\frametitle{Grid comparison}
+\centering
+
+\textbf{LDA grid $CH_4$ molecule}
+\begin{table}
+\centering
+\begin{tabular}{lr|rrr}
+\hline
+\hline
+                &       &            &        &           \\
+\multicolumn{1}{c}{}&
+\multicolumn{1}{c|}{nQuad}&
+\multicolumn{1}{c}{$N$}&
+\multicolumn{1}{c}{$\Delta N$}&
+\multicolumn{1}{c}{$E_{xc}$}\\
+                &       &            &        &           \\
+MRGrid $10^{-2}$&   176k& 9.999964172&-3.6e-05&-6.46026060\\
+MRGrid $10^{-3}$&   663k& 9.999998628&-1.4e-06&-6.46036718\\
+MRGrid $10^{-4}$&   2.4M&10.000000218& 2.4e-07&-6.46036822\\
+                &       &            &        &           \\
+$^\dag$ULTRAF   &   247k& 9.999999993&-6.8e-09&-6.46036436\\
+$^\dag$FINE     &   102k& 9.999999650&-3.5e-07&-6.46036401\\
+$^\dag$NORMAL   &    54k&10.000006918& 6.9e-06&-6.46036643\\
+$^\dag$COARSE   &    24k&10.000018997& 1.9e-05&-6.46035707\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{5mm}
+
+$^\dag$LSDalton release 2013\\
+$^\dag$R. E. Stratman {\it et. al.}
+{\it Chem. Phys. Lett.}, \textbf{257}, 1996
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Grid comparison}
+\centering
+
+\textbf{LDA grid $C_{5}H_{12}$ molecule}
+\begin{table}
+\centering
+\begin{tabular}{lr|rrr}
+\hline
+\hline
+                 &       &            &        &            \\
+\multicolumn{1}{c}{}&
+\multicolumn{1}{c|}{nQuad}&
+\multicolumn{1}{c}{$N$}&
+\multicolumn{1}{c}{$\Delta N$}&
+\multicolumn{1}{c}{$E_{xc}$}\\
+                 &       &            &        &            \\
+MRGrid $10^{-2}$ &   803k&41.999892113&-1.1e-04&-29.66475377\\
+MRGrid $10^{-3}$ &   1.9M&41.999983723&-1.8e-05&-29.66479617\\
+MRGrid $10^{-4}$ &   4.6M&41.999994187&-5.8e-06&-29.66482867\\
+                 &       &            &        &            \\
+$^\dag$ULTRAF    &   859k&41.999999209&-7.9e-07&-29.66483816\\
+$^\dag$FINE      &   369k&41.999996027&-3.9e-06&-29.66483762\\
+$^\dag$NORMAL    &   192k&41.999932189&-6.8e-05&-29.66485409\\
+$^\dag$COARSE    &    87k&41.999807105&-1.9e-04&-29.66481482\\
+\hline
+\hline
+\end{tabular}
+\end{table}
+
+\vspace{5mm}
+
+$^\dag$LSDalton release 2013\\
+$^\dag$R. E. Stratman {\it et. al.}
+{\it Chem. Phys. Lett.}, \textbf{257}, 1996
+
+
+\end{frame}
+
